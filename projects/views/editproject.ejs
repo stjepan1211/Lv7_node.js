@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+    <title>Add project</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    <style>
+        body         { padding-top:80px; }
+    </style>
+</head>
+<body>
+<div class="container">
+<div class="col-sm-6 col-sm-offset-3">
+
+
+    <form action="/<%= project._id%>/edit/put" method="put">
+        <div class="form-group" style="visibility: hidden;">
+            <label>Naziv</label>
+            <input type="text" class="form-control" name="naziv" value=<%= project.naziv %>>
+        </div>
+        <div class="form-group" style="visibility: hidden;">
+            <label>Opis</label>
+            <input type="text" class="form-control" name="opis" value=<%= project.opis %>>
+        </div>
+        <div class="form-group" style="visibility: hidden;">
+            <label>Cijena</label>
+            <input type="number" min="0" class="form-control" name="cijena" value=<%= project.cijena %>>
+        </div>
+        <div class="form-group">
+            <label>Obavljeno</label>
+            <input type="checkbox" class="form-control" name="obavljeni" >
+        </div>
+        <div class="form-group" style="visibility: hidden;">
+            <label>Pocetak</label>
+            <input type="date" class="form-control" name="pocetak" value=<%= project.pocetak %>>
+        </div>
+        <div class="form-group" style="visibility: hidden;">
+            <label>Zavrsetak</label>
+            <input type="date" class="form-control" name="zavrsetak" value=<%= project.zavrsetak %>>
+        </div>
+        <div class="form-group" style="visibility: hidden;">
+                <input type="textarea" name="clanovi" value=<%= project.clanovi %>>
+        </div>
+        <button type="submit" class="btn btn-warning btn-lg">Dodaj</button>
+    </form>
+
+</div>
+</div>
+</body>
+</html>
